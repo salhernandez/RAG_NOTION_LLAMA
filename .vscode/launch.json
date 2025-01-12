@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug load_docs_file_to_index",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/marqo/code_samples/load_docs_file_to_index.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
