@@ -18,8 +18,8 @@
             "justMyCode": true
         },
         {
-            "name": "Python: Flask",
-            "type": "debugpy",
+            "name": "Python: Flask - Run backend",
+            "type": "python",
             "request": "launch",
             "module": "flask",
             "args": [
