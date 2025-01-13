@@ -8,6 +8,14 @@
             "program": "${workspaceFolder}/marqo/code_samples/load_docs_file_to_index.py",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "Python: Debug getDataFromPage.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/notion/getDataFromPage.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }
