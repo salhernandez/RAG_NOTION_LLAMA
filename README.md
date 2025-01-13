@@ -1,3 +1,54 @@
+# RAG NOTION LLAMA
+This code will Add pages inside of a Notion Database as documents to marqo so that they can get vectorized and accessed by LLama 3.2
+
+## Installation
+1. Go through all steps in a **ORIGINAL DOCS - Marqo x Llama 3.2 for RAG**
+2. Before running backend code, go through **Notion Steps**
+
+## Notion Steps
+1. Create Notion integration https://www.notion.so/profile/integrations
+2. Set Content Capabilities to only **Read Content**
+   1. <p align="center">
+    <a><img src="https://raw.githubusercontent.com/salhernandez/RAG_NOTION_LLAMA/refs/heads/master/assets/notion_integration.png"></a>
+    </p>
+3. Go to Notion page that you want to share with integration and allow the connection
+   1. <p align="center">
+    <a><img src="https://raw.githubusercontent.com/salhernandez/RAG_NOTION_LLAMA/refs/heads/master/assets/notion_allow_connection.png"></a>
+    </p>
+4. Go to app.py and update `page_id` with your page ID
+   1. You can `copy link` of Notion page and get the first hash after your user
+      1. Example: 
+         1. if link is `https://www.notion.so/salhernandez/1234vvaaa1234` then page id is `1234vvaaa1234`
+5. Go to app.py and update `notion_secret` with your integration secret
+
+
+When code starts it will
+1. Get Notion Page data
+2. Get content inside of database
+3. Add the following to a list:
+   1. Title
+      1. Title of page in database
+   2. Description
+      1. Content of page in database
+4. Add documents (list) to marqo
+
+The documents will now be accessible through marqo and when you chat with it it will be able to use it when answering!
+
+Example: Llama3.2 is answering based on a Notion Page that was added as a document to marqo
+When I ask `"How to remove empty folders"`, it will return the following:
+<p align="center">
+    <a>
+        <img src="https://raw.githubusercontent.com/salhernandez/RAG_NOTION_LLAMA/refs/heads/master/assets/working_example_chat.png">
+    </a>
+</p>
+
+Original page referenced in Notion:
+<p align="center">
+    <a>
+        <img src="https://raw.githubusercontent.com/salhernandez/RAG_NOTION_LLAMA/refs/heads/master/assets/notion_doc.png">
+    </a>
+</p>
+
 # ORIGINAL DOCS - Marqo x Llama 3.2 for RAG
 
 This is a small demo of a Local RAG Question and Answering System with [Llama 3.2 1B](https://llama.meta.com/) and [Marqo](https://github.com/marqo-ai/marqo). This project has been built based off the original Marqo & Llama repo by [Owen Elliot](https://github.com/OwenPendrighElliott/LocalMarqoQA).
@@ -5,7 +56,7 @@ This is a small demo of a Local RAG Question and Answering System with [Llama 3.
 Article to accompany project: [Fully Local RAG with Llama 3.2 & Marqo](https://marqo.ai/blog)
 
 <p align="center">
-    <a><img src="https://github.com/ellie-sleightholm/marqo-llama-3.2-1B-rag/blob/main/assets/marqo_llama3_2_demo.gif"></a>
+    <a><img src="https://github.com/salhernandez/RAG_NOTION_LLAMA/blob/master/assets/marqo_llama3_2_demo.gif"></a>
 </p>
 
 ## Setup and Installation
