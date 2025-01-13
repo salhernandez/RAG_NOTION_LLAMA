@@ -1,0 +1,4 @@
+# Ignore everything inside backend/models/ except the directory itself
+backend/models/*
+!backend/models/.gitkeep
+!backend/models/1B/.gitkeep
